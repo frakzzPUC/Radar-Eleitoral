@@ -1,0 +1,63 @@
+# === Pasta de configurações do Copilot/GitHub ===
+.github/
+
+# === Variáveis de ambiente e segredos ===
+.env
+.env.*
+!.env.example
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+*.egg
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# === Node / Frontend ===
+node_modules/
+dist/
+dist-ssr/
+*.local
+*.tsbuildinfo
+
+# === Logs ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# === IDE / Editor ===
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+
+# === Docker ===
+.docker/
+
+# === Segredos e chaves ===
+*.pem
+*.key
+*.cert
+credentials.json
+secrets.json

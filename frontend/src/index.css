@@ -1,0 +1,106 @@
+:root {
+  --color-bg: #0A0F1E;
+  --color-bg-surface: rgba(255, 255, 255, 0.05);
+  --color-text: #e2e8f0;
+  --color-muted-text: #64748B;
+  --color-primary: #009C3B;
+  --color-accent: #FFDF00;
+  --color-success: #22C55E;
+  --color-danger: #EF4444;
+  --color-neutral: #64748B;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-focus: #009C3B;
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-primary);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+select:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/* Screen reader only */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Forced colors / high contrast support */
+@media (forced-colors: active) {
+  a:focus-visible {
+    outline: 3px solid ButtonText;
+  }
+
+  button {
+    border: 1px solid ButtonBorder;
+  }
+
+  svg {
+    fill: currentColor;
+    stroke: currentColor;
+  }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #f8fafc;
+    --color-bg-surface: rgba(0, 0, 0, 0.03);
+    --color-text: #1e293b;
+    --color-muted-text: #64748B;
+    --color-border: rgba(0, 0, 0, 0.1);
+  }
+}
